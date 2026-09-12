@@ -2,2188 +2,1236 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EUROPA CARDS</title>
 
 <style>
-
 *{
-box-sizing:border-box;
-margin:0;
-padding:0;
--webkit-tap-highlight-color:transparent;
-}
-
-html,
-body{
-min-height:100%;
-font-family:Arial,sans-serif;
-background:#050b14;
-color:white;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  -webkit-tap-highlight-color:transparent;
 }
 
 body{
-overflow-x:hidden;
+  font-family:Arial,sans-serif;
+  background:#050b14;
+  color:white;
+  overflow-x:hidden;
 }
 
 button{
-font:inherit;
-border:0;
-cursor:pointer;
-color:inherit;
+  font-family:inherit;
+  border:0;
+  cursor:pointer;
 }
 
 .hidden{
-display:none!important;
+  display:none!important;
 }
 
-/* =========================
-APP
-========================= */
+/* ================= APP ================= */
 
 #app{
-min-height:100vh;
-
-background:
-radial-gradient(
-circle at 50% -10%,
-#28527f,
-transparent 35%
-),
-linear-gradient(
-#081525,
-#050a12
-);
+  min-height:100vh;
+  background:
+    radial-gradient(circle at 50% -10%,#28527f,transparent 35%),
+    linear-gradient(#081525,#050a12);
 }
 
-/* =========================
-TOPBAR
-========================= */
+.page{
+  min-height:calc(100vh - 76px);
+  padding:18px 14px 110px;
+  max-width:900px;
+  margin:auto;
+}
+
+/* ================= TOP ================= */
 
 .topbar{
-height:64px;
-
-display:flex;
-align-items:center;
-justify-content:space-between;
-
-padding:0 15px;
-
-background:rgba(5,13,25,.97);
-
-border-bottom:1px solid #1d3047;
-
-position:sticky;
-top:0;
-
-z-index:50;
-
-backdrop-filter:blur(12px);
+  height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 15px;
+  background:rgba(5,13,25,.97);
+  border-bottom:1px solid #1d3047;
+  position:sticky;
+  top:0;
+  z-index:50;
 }
 
 .logo{
-font-size:20px;
-font-weight:1000;
-letter-spacing:1px;
+  font-size:20px;
+  font-weight:1000;
+  letter-spacing:1px;
 }
 
 .logo span{
-color:#5bd5ff;
+  color:#5bd5ff;
 }
 
 .resources{
-display:flex;
-gap:7px;
+  display:flex;
+  gap:7px;
 }
 
 .resource{
-background:#122238;
-border:1px solid #29415c;
-
-padding:7px 9px;
-
-border-radius:12px;
-
-font-size:11px;
-font-weight:bold;
+  background:#122238;
+  border:1px solid #29415c;
+  padding:7px 9px;
+  border-radius:12px;
+  font-size:11px;
+  font-weight:bold;
 }
 
-/* =========================
-PAGES
-========================= */
-
-.page{
-min-height:calc(100vh - 76px);
-
-padding:
-18px
-14px
-135px;
-
-max-width:900px;
-
-margin:auto;
-}
-
-/* =========================
-NAVIGATION
-========================= */
+/* ================= NAV ================= */
 
 .bottomnav{
-position:fixed;
-
-bottom:0;
-left:0;
-right:0;
-
-height:78px;
-
-z-index:100;
-
-background:rgba(4,10,19,.98);
-
-border-top:1px solid #1d3046;
-
-display:flex;
-
-justify-content:space-around;
-
-align-items:center;
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  height:78px;
+  z-index:1000;
+  background:rgba(4,10,19,.98);
+  border-top:1px solid #1d3046;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
 }
 
 .navbtn{
-background:none;
-
-color:#71849b;
-
-font-size:11px;
-
-font-weight:bold;
-
-padding:
-7px 20px;
+  background:none;
+  color:#71849b;
+  font-size:11px;
+  font-weight:bold;
+  padding:8px 20px;
 }
 
 .navbtn .icon{
-display:block;
-
-font-size:25px;
-
-margin-bottom:4px;
+  display:block;
+  font-size:25px;
+  margin-bottom:4px;
 }
 
 .navbtn.active{
-color:#59d2ff;
+  color:#59d2ff;
 }
 
-/* =========================
-HERO
-========================= */
+/* ================= HERO ================= */
 
 .hero{
-min-height:270px;
-
-padding:27px;
-
-border-radius:27px;
-
-overflow:hidden;
-
-position:relative;
-
-background:
-radial-gradient(
-circle at 80% 25%,
-rgba(70,200,255,.3),
-transparent 25%
-),
-linear-gradient(
-145deg,
-#163656,
-#081321
-);
-
-border:1px solid #28506e;
-
-box-shadow:
-0 20px 60px #0008;
+  min-height:270px;
+  padding:27px;
+  border-radius:27px;
+  overflow:hidden;
+  position:relative;
+  background:
+    radial-gradient(circle at 80% 25%,rgba(70,200,255,.3),transparent 25%),
+    linear-gradient(145deg,#163656,#081321);
+  border:1px solid #28506e;
+  box-shadow:0 20px 60px #0008;
 }
 
 .hero h1{
-font-size:40px;
-
-line-height:.95;
-
-font-weight:1000;
-
-position:relative;
-
-z-index:2;
+  font-size:40px;
+  line-height:.95;
+  font-weight:1000;
 }
 
 .hero h1 span{
-color:#5bd5ff;
+  color:#5bd5ff;
 }
 
 .hero p{
-margin-top:13px;
-
-color:#a5b8cd;
-
-line-height:1.4;
-
-max-width:520px;
+  margin-top:13px;
+  color:#a5b8cd;
+  line-height:1.4;
+  max-width:520px;
 }
 
 .hero-buttons{
-margin-top:25px;
-
-display:flex;
-
-gap:10px;
-
-flex-wrap:wrap;
-
-position:relative;
-
-z-index:3;
-}
-
-.primary,
-.secondary{
-padding:
-15px 20px;
-
-border-radius:17px;
-
-font-weight:1000;
+  margin-top:25px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
 }
 
 .primary{
-background:
-linear-gradient(
-135deg,
-#62dcff,
-#499eff
-);
-
-color:#03101a;
-
-box-shadow:
-0 8px 25px #42bfff55;
+  padding:15px 24px;
+  border-radius:17px;
+  background:linear-gradient(135deg,#62dcff,#499eff);
+  color:#03101a;
+  font-weight:1000;
+  box-shadow:0 8px 25px #42bfff55;
 }
 
 .secondary{
-background:#172b43;
-
-border:1px solid #2b4864;
+  padding:15px 20px;
+  border-radius:17px;
+  background:#172b43;
+  border:1px solid #2b4864;
+  color:white;
+  font-weight:bold;
 }
 
-/* =========================
-ARENA PREVIEW
-========================= */
-
-.arena-preview{
-height:220px;
-
-margin-top:18px;
-
-border-radius:23px;
-
-overflow:hidden;
-
-position:relative;
-
-border:1px solid #28415a;
-}
-
-.arena-preview img{
-width:100%;
-height:100%;
-
-object-fit:cover;
-}
-
-.arena-overlay{
-position:absolute;
-
-inset:0;
-
-display:flex;
-
-align-items:flex-end;
-
-padding:17px;
-
-background:
-linear-gradient(
-transparent,
-#000b
-);
-}
-
-/* =========================
-SECTIONS
-========================= */
+/* ================= SECTIONS ================= */
 
 .section-title{
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-margin:
-25px 3px
-12px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin:25px 2px 12px;
 }
 
 .section-title h2{
-font-size:20px;
+  font-size:20px;
 }
 
 .section-title small{
-color:#71859c;
+  color:#7d93aa;
 }
 
-/* =========================
-INFO
-========================= */
+/* ================= ARENA PREVIEW ================= */
+
+.arena-preview{
+  margin-top:18px;
+  height:190px;
+  border-radius:22px;
+  overflow:hidden;
+  position:relative;
+  border:1px solid #294963;
+  background:#102030;
+}
+
+.arena-preview img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.arena-overlay{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:18px;
+  background:linear-gradient(transparent,rgba(0,0,0,.85));
+}
+
+/* ================= INFO ================= */
 
 .info-grid{
-display:grid;
-
-grid-template-columns:
-repeat(3,1fr);
-
-gap:10px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
 }
 
 .info-card{
-padding:15px;
-
-min-height:105px;
-
-border-radius:19px;
-
-background:#0f1d2e;
-
-border:1px solid #20364d;
+  background:#0e1c2d;
+  border:1px solid #213b55;
+  border-radius:18px;
+  padding:16px 10px;
+  text-align:center;
 }
 
 .info-card .big{
-font-size:25px;
+  font-size:28px;
+  margin-bottom:8px;
 }
 
 .info-card strong{
-display:block;
-
-margin-top:7px;
-
-font-size:13px;
+  display:block;
+  font-size:12px;
 }
 
 .info-card p{
-color:#72869c;
-
-font-size:10px;
-
-margin-top:4px;
+  margin-top:5px;
+  color:#71849b;
+  font-size:10px;
 }
 
-/* =========================
-DECK
-========================= */
+/* ================= DECK ================= */
 
 .deck-wrap{
-background:#0d1a29;
-
-border:1px solid #213a53;
-
-padding:14px;
-
-border-radius:22px;
+  background:#0b1828;
+  border:1px solid #1e374f;
+  padding:14px;
+  border-radius:20px;
 }
 
 .deck-slots{
-display:grid;
-
-grid-template-columns:
-repeat(5,1fr);
-
-gap:8px;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:8px;
 }
 
 .deck-slot{
-aspect-ratio:.72;
-
-border-radius:14px;
-
-border:
-2px dashed #294561;
-
-background:#081321;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-text-align:center;
-
-cursor:pointer;
-
-overflow:hidden;
+  min-height:88px;
+  border-radius:15px;
+  background:#12243a;
+  border:2px solid #29445d;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:7px;
+  transition:.15s;
 }
 
 .deck-slot.selected{
-border-color:#59d5ff;
-
-box-shadow:
-0 0 18px #4fd2ff44;
+  border-color:#5bd5ff;
+  box-shadow:0 0 18px #5bd5ff44;
+  transform:translateY(-2px);
 }
 
 .deck-slot .mini{
-font-size:34px;
+  font-size:31px;
+  margin-bottom:5px;
 }
 
 .deck-slot span{
-display:block;
-
-font-size:9px;
-
-color:#73879d;
-
-margin-top:4px;
+  display:block;
+  font-size:10px;
+  font-weight:bold;
 }
 
 .deck-help{
-text-align:center;
-
-font-size:11px;
-
-color:#71869d;
-
-margin-top:12px;
+  color:#70869d;
+  font-size:11px;
+  text-align:center;
+  margin:12px 0;
 }
 
 .deck-choices{
-display:grid;
-
-grid-template-columns:
-repeat(3,1fr);
-
-gap:8px;
-
-margin-top:13px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:8px;
 }
 
 .choice{
-background:#14263c;
+  background:#13253a;
+  border:1px solid #29435b;
+  color:white;
+  border-radius:15px;
+  padding:10px 5px;
+}
 
-border:1px solid #2a4660;
-
-border-radius:13px;
-
-padding:9px;
-
-color:white;
+.choice:active{
+  transform:scale(.96);
 }
 
 .choice-icon{
-font-size:29px;
+  font-size:28px;
 }
 
 .choice-name{
-font-size:10px;
-
-font-weight:bold;
-
-margin-top:4px;
+  font-size:10px;
+  font-weight:bold;
+  margin-top:4px;
 }
 
-/* =========================
-COLLECTION
-========================= */
+/* ================= COLLECTION ================= */
 
 .collection-grid{
-display:grid;
-
-grid-template-columns:
-repeat(2,1fr);
-
-gap:12px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
 }
 
 .card{
-position:relative;
+  position:relative;
+  background:linear-gradient(160deg,#182c43,#0c1828);
+  border:1px solid #2b4863;
+  border-radius:18px;
+  overflow:hidden;
+  padding-bottom:10px;
+}
 
-min-height:220px;
-
-border-radius:21px;
-
-padding:9px;
-
-overflow:hidden;
-
-background:
-linear-gradient(
-145deg,
-#1a2d43,
-#0b1420
-);
-
-border:1px solid #2a425b;
+.card .count{
+  position:absolute;
+  top:7px;
+  right:7px;
+  z-index:2;
+  background:#050b14dd;
+  border-radius:8px;
+  padding:4px 6px;
+  font-size:9px;
+  font-weight:bold;
 }
 
 .card-art{
-height:125px;
-
-border-radius:15px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-background:
-radial-gradient(
-circle at 50% 30%,
-#ffffff35,
-transparent 30%
-),
-linear-gradient(
-145deg,
-#315d83,
-#111c2b
-);
+  height:130px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:
+    radial-gradient(circle,#37617f,#102237 65%);
 }
 
 .card-character{
-font-size:65px;
-
-filter:
-drop-shadow(
-0 7px 5px #0008
-);
-}
-
-.count{
-position:absolute;
-
-right:9px;
-
-top:9px;
-
-background:#07101c;
-
-padding:
-5px 8px;
-
-border-radius:9px;
-
-font-size:10px;
-
-font-weight:1000;
-
-z-index:2;
+  font-size:62px;
 }
 
 .card-name{
-font-size:15px;
-
-font-weight:1000;
-
-margin-top:9px;
+  text-align:center;
+  font-weight:1000;
+  font-size:14px;
+  margin-top:9px;
 }
 
 .card-rarity{
-font-size:10px;
-
-text-transform:uppercase;
-
-color:#61d2ff;
-
-font-weight:bold;
-
-margin-top:3px;
+  text-align:center;
+  color:#6fdcff;
+  font-size:9px;
+  text-transform:uppercase;
+  margin-top:3px;
 }
 
 .card-stats{
-display:flex;
-
-justify-content:space-between;
-
-font-size:10px;
-
-color:#9fb1c4;
-
-margin-top:8px;
+  display:flex;
+  justify-content:space-around;
+  margin-top:9px;
+  font-size:9px;
+  color:#b8c9d8;
 }
 
-/* =========================
-BOOSTERS
-========================= */
+/* ================= BOOSTERS ================= */
 
 .booster-grid{
-display:grid;
-
-grid-template-columns:
-repeat(2,1fr);
-
-gap:14px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
 }
 
 .booster{
-min-height:230px;
-
-padding:17px;
-
-border-radius:22px;
-
-text-align:center;
-
-background:
-radial-gradient(
-circle at 50% 20%,
-#a24cff66,
-transparent 35%
-),
-linear-gradient(
-145deg,
-#29104d,
-#0d1426
-);
-
-border:1px solid #7545a3;
+  background:#0e1d2e;
+  border:1px solid #28435c;
+  border-radius:22px;
+  padding:18px;
+  text-align:center;
 }
 
 .pack{
-height:125px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
+  height:140px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
 .pack-body{
-height:110px;
-
-width:85px;
-
-border-radius:14px;
-
-background:
-linear-gradient(
-145deg,
-#984cf0,
-#321075
-);
-
-border:
-3px solid #d3a5ff;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:42px;
-
-transform:rotate(-7deg);
-
-box-shadow:
-0 15px 35px #0008;
+  width:80px;
+  height:110px;
+  border-radius:15px;
+  background:linear-gradient(145deg,#8c42d5,#38207d);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:42px;
+  box-shadow:0 0 35px #914cff66;
+  transform:rotate(-5deg);
 }
 
 .booster h3{
-font-size:17px;
+  margin-bottom:8px;
 }
 
 .booster p{
-font-size:11px;
-
-color:#92a2b6;
-
-margin:
-7px 0
-13px;
+  color:#7e95aa;
+  font-size:12px;
+  line-height:1.4;
+  margin-bottom:15px;
 }
 
-/* =========================
-BOOSTER MODAL
-========================= */
+/* ================= MODAL ================= */
 
 .modal{
-position:fixed;
-
-inset:0;
-
-z-index:300;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-background:#02070fee;
-
-padding:20px;
+  position:fixed;
+  inset:0;
+  z-index:2000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  background:rgba(2,7,15,.82);
 }
 
 .booster-opening{
-width:100%;
-
-max-width:480px;
-
-text-align:center;
+  width:min(420px,100%);
+  padding:25px;
+  border-radius:28px;
+  text-align:center;
+  background:#edf8ff;
+  color:#07111c;
+  box-shadow:0 0 80px #62dfff66;
 }
 
 .magic-bg{
-height:330px;
-
-border-radius:30px;
-
-overflow:hidden;
-
-position:relative;
-
-background:
-radial-gradient(
-circle,
-#fff,
-transparent 15%
-),
-radial-gradient(
-circle at 20% 20%,
-#fff 0 2px,
-transparent 3px
-),
-radial-gradient(
-circle at 80% 30%,
-#fff 0 2px,
-transparent 3px
-),
-radial-gradient(
-circle at 35% 75%,
-#fff 0 2px,
-transparent 3px
-),
-linear-gradient(
-135deg,
-#e7fbff,
-#68baff,
-#5230a2
-);
+  height:300px;
+  border-radius:22px;
+  background:
+    radial-gradient(circle at center,#fff,#bceeff 50%,#68cfff);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
 }
 
 .opening-pack{
-position:absolute;
-
-width:120px;
-
-height:155px;
-
-left:50%;
-
-top:50%;
-
-transform:
-translate(-50%,-50%)
-rotate(-5deg);
-
-border-radius:18px;
-
-background:
-linear-gradient(
-145deg,
-#a050ff,
-#351276
-);
-
-border:
-4px solid #d6aaff;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:60px;
-
-animation:
-floatPack 1s infinite alternate;
+  width:100px;
+  height:135px;
+  border-radius:18px;
+  background:linear-gradient(145deg,#a14be8,#342078);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:45px;
+  box-shadow:0 0 50px #8d35ff;
+  animation:packPulse .7s infinite alternate;
 }
 
-@keyframes floatPack{
-
-to{
-transform:
-translate(-50%,-57%)
-rotate(5deg);
-}
-
+@keyframes packPulse{
+  from{transform:scale(1) rotate(-4deg)}
+  to{transform:scale(1.08) rotate(4deg)}
 }
 
 .opening-card{
-position:absolute;
-
-width:110px;
-
-height:155px;
-
-left:50%;
-
-top:50%;
-
-transform:
-translate(-50%,-50%)
-scale(.2);
-
-opacity:0;
-
-border-radius:16px;
-
-background:
-linear-gradient(
-145deg,
-#f5fdff,
-#80d8ff
-);
-
-border:
-4px solid white;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:62px;
-
-box-shadow:
-0 0 60px white;
+  position:absolute;
+  font-size:100px;
+  opacity:0;
+  transform:translateY(180px) scale(.4);
 }
 
 .opening-card.reveal{
-animation:
-revealCard 1.2s forwards;
+  animation:cardReveal 1s forwards;
 }
 
-@keyframes revealCard{
-
-0%{
-opacity:0;
-
-transform:
-translate(-50%,-50%)
-scale(.2)
-rotate(-20deg);
-}
-
-60%{
-opacity:1;
-
-transform:
-translate(-50%,-100%)
-scale(1.15)
-rotate(8deg);
-}
-
-100%{
-opacity:1;
-
-transform:
-translate(-50%,-95%)
-scale(1);
-}
-
+@keyframes cardReveal{
+  0%{
+    opacity:0;
+    transform:translateY(180px) scale(.4) rotate(-15deg);
+  }
+  70%{
+    opacity:1;
+    transform:translateY(-15px) scale(1.15) rotate(5deg);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0) scale(1) rotate(0);
+  }
 }
 
 .modal-title{
-font-size:24px;
-
-font-weight:1000;
-
-margin-top:18px;
+  font-size:23px;
+  font-weight:1000;
+  margin-top:20px;
 }
 
 .modal-text{
-color:#9cafc2;
-
-margin-top:6px;
+  margin-top:8px;
+  color:#506579;
 }
 
-/* =========================
-BATTLE
-========================= */
+/* ================= BATTLE ================= */
 
 #battlePage{
-position:fixed;
-
-inset:0;
-
-z-index:200;
-
-background:#050b12;
-
-display:none;
-
-flex-direction:column;
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:1500;
+  background:#050b14;
+  flex-direction:column;
 }
 
 #battlePage.active{
-display:flex;
+  display:flex;
 }
 
 .battle-top{
-height:54px;
-
-flex-shrink:0;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-padding:0 14px;
-
-background:#050c15ee;
-
-border-bottom:1px solid #203247;
-
-z-index:20;
+  height:62px;
+  flex-shrink:0;
+  background:#091522;
+  border-bottom:1px solid #243b51;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 15px;
 }
 
 .battle-title{
-font-size:13px;
-
-font-weight:1000;
+  font-weight:1000;
 }
 
 .hp{
-font-size:12px;
-
-font-weight:bold;
+  background:#16273a;
+  border-radius:12px;
+  padding:8px 11px;
+  font-size:12px;
+  font-weight:bold;
 }
 
-/* =========================
-ARENA
-========================= */
-
 .arena{
-flex:1;
-
-position:relative;
-
-overflow:hidden;
-
-background:#244c32;
+  flex:1;
+  position:relative;
+  overflow:hidden;
+  background:#162d1d;
 }
 
 .arena-map{
-position:absolute;
-
-inset:0;
-
-width:100%;
-
-height:100%;
-
-object-fit:cover;
-
-z-index:1;
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
-/* =========================
-LOADING
-========================= */
-
-.loading{
-position:absolute;
-
-inset:0;
-
-z-index:500;
-
-background:#06101c;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
+#unitsLayer,
+#effectsLayer{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
 }
-
-.loading h2{
-margin-bottom:20px;
-}
-
-.loading-bar{
-width:250px;
-
-height:9px;
-
-background:#1b2b3d;
-
-border-radius:10px;
-
-overflow:hidden;
-}
-
-.loading-fill{
-height:100%;
-
-width:0;
-
-background:#59d4ff;
-
-animation:
-load 2.1s forwards;
-}
-
-@keyframes load{
-
-to{
-width:100%;
-}
-
-}
-
-/* =========================
-UNITS
-========================= */
-
-.unit{
-position:absolute;
-
-width:45px;
-
-height:52px;
-
-transform:
-translate(-50%,-50%);
-
-z-index:20;
-
-pointer-events:none;
-
-text-align:center;
-}
-
-.unit-body{
-width:42px;
-
-height:42px;
-
-border-radius:50%;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:27px;
-
-background:#12364e;
-
-border:
-3px solid #63dcff;
-
-box-shadow:
-0 5px 15px #0008;
-}
-
-.unit.enemy .unit-body{
-background:#4b1820;
-
-border-color:#ff5d66;
-}
-
-.unit-hp{
-position:absolute;
-
-top:-9px;
-
-left:3px;
-
-width:38px;
-
-height:5px;
-
-background:#111;
-
-border-radius:5px;
-
-overflow:hidden;
-}
-
-.unit-hp-fill{
-height:100%;
-
-width:100%;
-
-background:#53e47c;
-}
-
-/* =========================
-EFFECTS
-========================= */
-
-.damage-text{
-position:absolute;
-
-z-index:60;
-
-font-size:15px;
-
-font-weight:1000;
-
-text-shadow:
-0 2px 5px #000;
-
-animation:
-damage .7s forwards;
-}
-
-@keyframes damage{
-
-to{
-transform:
-translateY(-30px);
-
-opacity:0;
-}
-
-}
-
-.projectile{
-position:absolute;
-
-width:9px;
-
-height:9px;
-
-border-radius:50%;
-
-background:white;
-
-box-shadow:
-0 0 15px #8deaff;
-
-z-index:50;
-}
-
-.explosion{
-position:absolute;
-
-width:32px;
-
-height:32px;
-
-border-radius:50%;
-
-background:
-radial-gradient(
-circle,
-#fff,
-#69ddff,
-transparent
-);
-
-transform:
-translate(-50%,-50%);
-
-animation:
-boom .45s forwards;
-
-z-index:55;
-}
-
-@keyframes boom{
-
-to{
-transform:
-translate(-50%,-50%)
-scale(3);
-
-opacity:0;
-}
-
-}
-
-/* =========================
-CASTLES
-========================= */
 
 .castle{
-position:absolute;
-
-width:82px;
-
-text-align:center;
-
-transform:
-translateX(-50%);
-
-z-index:12;
-}
-
-.castle-icon{
-font-size:52px;
-
-filter:
-drop-shadow(
-0 8px 7px #0008
-);
-}
-
-.castle-hp{
-height:8px;
-
-border-radius:5px;
-
-background:#111;
-
-overflow:hidden;
-
-border:1px solid white;
-}
-
-.castle-fill{
-height:100%;
-
-width:100%;
-
-background:#53e47c;
+  position:absolute;
+  z-index:5;
+  width:80px;
+  text-align:center;
 }
 
 .enemy-castle{
-top:7%;
-
-left:50%;
+  top:3%;
+  left:50%;
+  transform:translateX(-50%);
 }
 
 .player-castle{
-bottom:7%;
-
-left:50%;
+  bottom:3%;
+  left:50%;
+  transform:translateX(-50%);
 }
 
-/* =========================
-BATTLE HAND
-========================= */
-
-.battle-bottom{
-min-height:125px;
-
-padding:8px;
-
-background:#050c15;
-
-border-top:1px solid #21364c;
-
-z-index:80;
+.castle-icon{
+  font-size:48px;
+  filter:drop-shadow(0 4px 5px #000);
 }
 
-.energy-row{
-display:flex;
-
-align-items:center;
-
-gap:8px;
-
-margin-bottom:7px;
+.castle-hp{
+  height:8px;
+  background:#220d0d;
+  border-radius:10px;
+  overflow:hidden;
+  border:1px solid #fff4;
 }
 
-.energy-label{
-font-size:12px;
-
-font-weight:1000;
+.castle-fill{
+  height:100%;
+  width:100%;
+  background:#46e06e;
 }
 
-.energy-bar{
-flex:1;
-
-height:10px;
-
-background:#1b2939;
-
-border-radius:10px;
-
-overflow:hidden;
+.loading{
+  position:absolute;
+  inset:0;
+  z-index:100;
+  background:rgba(3,10,18,.93);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:20px;
 }
 
-.energy-fill{
-height:100%;
-
-width:0;
-
-background:
-linear-gradient(
-90deg,
-#4ed0ff,
-#a954ff
-);
+.loading h2{
+  font-size:20px;
 }
 
-.hand{
-display:grid;
-
-grid-template-columns:
-repeat(5,1fr);
-
-gap:6px;
+.loading-bar{
+  width:min(300px,80%);
+  height:13px;
+  background:#1c3045;
+  border-radius:20px;
+  overflow:hidden;
 }
 
-.hand-card{
-height:76px;
-
-border-radius:13px;
-
-background:#14263c;
-
-border:
-2px solid #2b4864;
-
-position:relative;
-
-padding:5px;
+.loading-fill{
+  height:100%;
+  width:0;
+  background:#5bd5ff;
+  animation:loading 2.2s linear forwards;
 }
 
-.hand-card.cooldown{
-opacity:.35;
-
-filter:grayscale(1);
+@keyframes loading{
+  from{width:0}
+  to{width:100%}
 }
 
-.hand-icon{
-font-size:28px;
+.unit{
+  position:absolute;
+  width:48px;
+  height:65px;
+  transform:translate(-50%,-50%);
+  z-index:10;
 }
 
-.hand-name{
-font-size:8px;
-
-font-weight:bold;
-
-white-space:nowrap;
-
-overflow:hidden;
-
-text-overflow:ellipsis;
+.unit-body{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  background:#14283c;
+  border:2px solid white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:28px;
+  filter:drop-shadow(0 4px 4px #000);
 }
 
-.cost{
-position:absolute;
-
-left:4px;
-
-top:4px;
-
-width:18px;
-
-height:18px;
-
-border-radius:50%;
-
-background:#704bff;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:10px;
-
-font-weight:1000;
+.unit.enemy .unit-body{
+  background:#4a1820;
 }
 
-/* =========================
-RESULT
-========================= */
+.unit-hp{
+  position:absolute;
+  top:-9px;
+  left:4px;
+  width:40px;
+  height:5px;
+  background:#250d0d;
+  border-radius:5px;
+  overflow:hidden;
+}
+
+.unit-hp-fill{
+  width:100%;
+  height:100%;
+  background:#42e56b;
+}
+
+.damage-number{
+  position:absolute;
+  color:white;
+  font-weight:1000;
+  font-size:18px;
+  text-shadow:0 2px 3px #000;
+  animation:damageFloat .7s forwards;
+  pointer-events:none;
+}
+
+@keyframes damageFloat{
+  from{
+    opacity:1;
+    transform:translate(-50%,0) scale(1);
+  }
+  to{
+    opacity:0;
+    transform:translate(-50%,-45px) scale(1.25);
+  }
+}
+
+.explosion{
+  position:absolute;
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+  background:radial-gradient(circle,#fff,#7beaff,#8850ff,transparent 70%);
+  animation:boom .5s forwards;
+}
+
+@keyframes boom{
+  from{opacity:1;transform:translate(-50%,-50%) scale(.3)}
+  to{opacity:0;transform:translate(-50%,-50%) scale(2)}
+}
+
+.projectile{
+  position:absolute;
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:#fff;
+  box-shadow:0 0 12px #fff;
+  z-index:30;
+}
 
 .result{
-position:absolute;
-
-inset:0;
-
-z-index:1000;
-
-background:#02070edb;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-padding:20px;
-
-text-align:center;
+  position:absolute;
+  inset:0;
+  z-index:200;
+  background:#0009;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .result-box{
-width:min(400px,100%);
-
-padding:
-30px 22px;
-
-border-radius:28px;
-
-background:
-linear-gradient(
-145deg,
-#152a42,
-#09121d
-);
-
-border:1px solid #345574;
-
-box-shadow:
-0 30px 80px #000c;
+  width:min(360px,90%);
+  padding:30px;
+  background:#0c1c2d;
+  border:1px solid #36536d;
+  border-radius:25px;
+  text-align:center;
 }
 
 .result-icon{
-font-size:75px;
+  font-size:60px;
 }
 
-.result h1{
-font-size:38px;
-
-margin-top:8px;
+.result-box h1{
+  margin:12px 0;
 }
 
-.result p{
-color:#93a7ba;
-
-margin:
-10px 0
-22px;
+.result-box p{
+  color:#91a5b8;
+  margin-bottom:20px;
 }
 
-/* =========================
-MOBILE
-========================= */
-
-@media(max-width:600px){
-
-.info-grid{
-grid-template-columns:
-1fr 1fr;
+.battle-bottom{
+  flex-shrink:0;
+  background:#081321;
+  border-top:1px solid #243b51;
+  padding:9px 10px 12px;
 }
 
-.info-card:last-child{
-grid-column:
-span 2;
+.energy-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:8px;
 }
 
-.hero h1{
-font-size:35px;
+.energy-label{
+  width:55px;
+  font-weight:1000;
+  font-size:12px;
 }
 
-.collection-grid{
-grid-template-columns:
-repeat(2,1fr);
+.energy-bar{
+  height:12px;
+  flex:1;
+  background:#1b2e42;
+  border-radius:20px;
+  overflow:hidden;
 }
 
-.booster-grid{
-grid-template-columns:1fr;
+.energy-fill{
+  height:100%;
+  width:50%;
+  background:linear-gradient(90deg,#69e7ff,#966dff);
 }
 
+.hand{
+  display:flex;
+  gap:7px;
+  overflow-x:auto;
 }
 
-/* =========================
-DESKTOP
-========================= */
-
-@media(min-width:700px){
-
-.collection-grid{
-grid-template-columns:
-repeat(4,1fr);
+.hand-card{
+  min-width:72px;
+  position:relative;
+  padding:7px;
+  border-radius:13px;
+  background:#162b40;
+  border:1px solid #31506b;
+  color:white;
 }
 
-.booster-grid{
-grid-template-columns:
-repeat(3,1fr);
+.hand-card.cooldown{
+  opacity:.35;
+  filter:grayscale(1);
 }
 
+.hand-card .cost{
+  position:absolute;
+  top:4px;
+  left:4px;
+  background:#6e5aff;
+  border-radius:8px;
+  padding:3px 5px;
+  font-size:9px;
+  font-weight:bold;
 }
 
+.hand-icon{
+  font-size:29px;
+  margin-top:7px;
+}
+
+.hand-name{
+  font-size:9px;
+  font-weight:bold;
+  margin-top:2px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:650px){
+
+  .hero h1{
+    font-size:34px;
+  }
+
+  .info-grid{
+    grid-template-columns:1fr 1fr 1fr;
+  }
+
+  .collection-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .deck-choices{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .booster-grid{
+    grid-template-columns:1fr;
+  }
+
+  .castle-icon{
+    font-size:38px;
+  }
+
+  .unit{
+    width:42px;
+  }
+
+  .unit-body{
+    width:40px;
+    height:40px;
+    font-size:24px;
+  }
+}
 </style>
 </head>
 
-
 <body>
-
 
 <div id="app">
 
+  <header class="topbar">
+    <div class="logo">EUROPA <span>CARDS</span></div>
 
-<!-- =========================
-TOPBAR
-========================= -->
+    <div class="resources">
+      <div class="resource">💎 <span id="gems">125</span></div>
+      <div class="resource">🪙 <span id="coins">850</span></div>
+    </div>
+  </header>
 
-<header class="topbar">
+  <!-- ================= HOME ================= -->
 
-<div class="logo">
-EUROPA <span>CARDS</span>
-</div>
+  <section id="home" class="page">
 
-<div class="resources">
+    <div class="hero">
+      <h1>
+        DEVIENS<br>
+        LE <span>CHAMPION</span>
+      </h1>
 
-<div class="resource">
-💎 <span id="gems">125</span>
-</div>
+      <p>
+        Collectionne tes combattants, construis ton deck
+        et affronte ton adversaire dans l'arène EUROPA.
+      </p>
 
-<div class="resource">
-🪙 <span id="coins">850</span>
-</div>
+      <div class="hero-buttons">
+        <button id="combatButton" class="primary">
+          ⚔️ COMBAT
+        </button>
 
-</div>
+        <button id="collectionHeroButton" class="secondary">
+          🃏 MES CARTES
+        </button>
+      </div>
+    </div>
 
-</header>
+    <div class="arena-preview">
+      <img src="0be0ebec-5842-49b9-a58b-3af922a15119.png" alt="Arène EUROPA">
 
+      <div class="arena-overlay">
+        <strong>🏟️ ARÈNE EUROPA</strong>
+      </div>
+    </div>
 
-<!-- =========================
-HOME
-========================= -->
+    <div class="section-title">
+      <h2>Ton profil</h2>
+    </div>
 
-<section id="home" class="page">
+    <div class="info-grid">
 
+      <div class="info-card">
+        <div class="big">🏆</div>
+        <strong id="trophies">0 trophées</strong>
+        <p>Continue les combats</p>
+      </div>
 
-<div class="hero">
+      <div class="info-card">
+        <div class="big">🃏</div>
+        <strong id="cardTotal">0 cartes</strong>
+        <p>Dans ta collection</p>
+      </div>
 
-<h1>
-DEVIENS<br>
-LE <span>CHAMPION</span>
-</h1>
+      <div class="info-card">
+        <div class="big">⚔️</div>
+        <strong>Deck de 5</strong>
+        <p>Choisis tes combattants</p>
+      </div>
 
-<p>
-Collectionne tes combattants,
-construis ton deck et affronte
-ton adversaire dans l'arène EUROPA.
-</p>
+    </div>
 
+    <div class="section-title">
+      <h2>Ton deck</h2>
+      <small>5 cartes</small>
+    </div>
 
-<div class="hero-buttons">
+    <div class="deck-wrap">
 
-<button
-type="button"
-class="primary"
-id="combatButton">
+      <div id="homeDeckSlots" class="deck-slots"></div>
 
-⚔️ COMBAT
+      <div class="deck-help">
+        👆 Appuie sur un emplacement puis choisis une carte
+      </div>
 
-</button>
+      <div id="homeDeckChoices" class="deck-choices"></div>
 
+    </div>
 
-<button
-type="button"
-class="secondary"
-id="cardsButton">
+  </section>
 
-🃏 MES CARTES
+  <!-- ================= COLLECTION ================= -->
 
-</button>
+  <section id="collection" class="page hidden">
 
-</div>
+    <div class="section-title">
+      <h2>🃏 Collection</h2>
+      <small id="collectionCount"></small>
+    </div>
 
-</div>
+    <div id="collectionGrid" class="collection-grid"></div>
 
+  </section>
 
-<div class="arena-preview">
+  <!-- ================= BOOSTERS ================= -->
 
-<img
-src="0be0ebec-5842-49b9-a58b-3af922a15119.png"
-alt="Arène EUROPA">
+  <section id="boosters" class="page hidden">
 
-<div class="arena-overlay">
+    <div class="section-title">
+      <h2>🎁 Boosters</h2>
+      <small>Découvre de nouvelles cartes</small>
+    </div>
 
-<strong>
-🏟️ ARÈNE EUROPA
-</strong>
+    <div class="booster-grid">
 
-</div>
+      <div class="booster">
 
-</div>
+        <div class="pack">
+          <div class="pack-body">✨</div>
+        </div>
 
+        <h3>Booster EUROPA</h3>
 
-<div class="section-title">
+        <p>
+          Ouvre un booster et obtiens une carte.
+        </p>
 
-<h2>
-Ton profil
-</h2>
+        <button id="openBoosterButton" class="primary">
+          OUVRIR
+        </button>
 
-</div>
+      </div>
 
+      <div class="booster">
 
-<div class="info-grid">
+        <div class="pack">
+          <div class="pack-body">⚡</div>
+        </div>
 
+        <h3>Booster Élite</h3>
 
-<div class="info-card">
+        <p>
+          Plus de chances d'obtenir une carte rare.
+        </p>
 
-<div class="big">
-🏆
-</div>
+        <button id="openEliteButton" class="secondary">
+          OUVRIR
+        </button>
 
-<strong id="trophies">
-0 trophées
-</strong>
+      </div>
 
-<p>
-Continue les combats
-</p>
+    </div>
 
-</div>
+  </section>
 
+  <!-- ================= NAV ================= -->
 
-<div class="info-card">
+  <nav class="bottomnav">
 
-<div class="big">
-🃏
-</div>
+    <button class="navbtn active" data-page="home">
+      <span class="icon">🏠</span>
+      Accueil
+    </button>
 
-<strong id="cardTotal">
-0 cartes
-</strong>
+    <button class="navbtn" data-page="collection">
+      <span class="icon">🃏</span>
+      Collection
+    </button>
 
-<p>
-Dans ta collection
-</p>
+    <button class="navbtn" data-page="boosters">
+      <span class="icon">🎁</span>
+      Boosters
+    </button>
 
-</div>
-
-
-<div class="info-card">
-
-<div class="big">
-⚔️
-</div>
-
-<strong>
-Deck de 5
-</strong>
-
-<p>
-Choisis tes combattants
-</p>
-
-</div>
-
-
-</div>
-
-
-<div class="section-title">
-
-<h2>
-Ton deck
-</h2>
-
-<small>
-5 cartes
-</small>
-
-</div>
-
-
-<div class="deck-wrap">
-
-<div
-id="homeDeckSlots"
-class="deck-slots">
-</div>
-
-
-<div class="deck-help">
-
-👆 Appuie sur un emplacement
-puis choisis une carte
+  </nav>
 
 </div>
 
+<!-- ================= BOOSTER MODAL ================= -->
 
-<div
-id="homeDeckChoices"
-class="deck-choices">
-</div>
+<div id="boosterModal" class="modal hidden">
 
-</div>
+  <div class="booster-opening">
 
+    <div class="magic-bg">
 
-</section>
+      <div id="openingPack" class="opening-pack">
+        ✨
+      </div>
 
+      <div id="openingCard" class="opening-card">
+        🧙
+      </div>
 
-<!-- =========================
-COLLECTION
-========================= -->
+    </div>
 
-<section
-id="collection"
-class="page hidden">
+    <div id="openingTitle" class="modal-title">
+      Ouverture du booster...
+    </div>
 
+    <div id="openingText" class="modal-text">
+      La magie EUROPA arrive...
+    </div>
 
-<div class="section-title">
+    <br>
 
-<h2>
-🃏 Collection
-</h2>
+    <button id="closeBoosterButton" class="primary hidden">
+      CONTINUER
+    </button>
 
-<small id="collectionCount">
-</small>
-
-</div>
-
-
-<div
-id="collectionGrid"
-class="collection-grid">
-</div>
-
-
-</section>
-
-
-<!-- =========================
-BOOSTERS
-========================= -->
-
-<section
-id="boosters"
-class="page hidden">
-
-
-<div class="section-title">
-
-<h2>
-🎁 Boosters
-</h2>
-
-<small>
-Découvre de nouvelles cartes
-</small>
+  </div>
 
 </div>
 
-
-<div class="booster-grid">
-
-
-<div class="booster">
-
-
-<div class="pack">
-
-<div class="pack-body">
-✨
-</div>
-
-</div>
-
-
-<h3>
-Booster EUROPA
-</h3>
-
-
-<p>
-Ouvre un booster et obtiens une carte.
-</p>
-
-
-<button
-type="button"
-class="primary boosterButton">
-
-OUVRIR
-
-</button>
-
-
-</div>
-
-
-
-<div class="booster">
-
-
-<div class="pack">
-
-<div class="pack-body">
-⚡
-</div>
-
-</div>
-
-
-<h3>
-Booster Élite
-</h3>
-
-
-<p>
-Plus de chances d'obtenir une carte rare.
-</p>
-
-
-<button
-type="button"
-class="secondary boosterButton">
-
-OUVRIR
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-<!-- =========================
-NAVIGATION
-========================= -->
-
-<nav class="bottomnav">
-
-
-<button
-type="button"
-class="navbtn active"
-data-page="home">
-
-<span class="icon">
-🏠
-</span>
-
-Accueil
-
-</button>
-
-
-<button
-type="button"
-class="navbtn"
-data-page="collection">
-
-<span class="icon">
-🃏
-</span>
-
-Collection
-
-</button>
-
-
-<button
-type="button"
-class="navbtn"
-data-page="boosters">
-
-<span class="icon">
-🎁
-</span>
-
-Boosters
-
-</button>
-
-
-</nav>
-
-
-</div>
-
-
-<!-- =========================
-BOOSTER MODAL
-========================= -->
-
-<div
-id="boosterModal"
-class="modal hidden">
-
-
-<div class="booster-opening">
-
-
-<div class="magic-bg">
-
-
-<div
-id="openingPack"
-class="opening-pack">
-
-✨
-
-</div>
-
-
-<div
-id="openingCard"
-class="opening-card">
-
-🧙
-
-</div>
-
-
-</div>
-
-
-<div
-id="openingTitle"
-class="modal-title">
-
-Ouverture du booster...
-
-</div>
-
-
-<div
-id="openingText"
-class="modal-text">
-
-La magie EUROPA arrive...
-
-</div>
-
-
-<br>
-
-
-<button
-type="button"
-id="closeBooster"
-class="primary hidden">
-
-CONTINUER
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-<!-- =========================
-BATTLE
-========================= -->
+<!-- ================= BATTLE ================= -->
 
 <div id="battlePage">
 
+  <div class="battle-top">
 
-<div class="battle-top">
+    <div class="battle-title">
+      ⚔️ BATAILLE EUROPA
+    </div>
 
+    <div class="hp">
+      🏰 <span id="enemyHPText">100%</span>
+    </div>
 
-<div class="battle-title">
+  </div>
 
-⚔️ BATAILLE EUROPA
+  <div id="arena" class="arena">
 
-</div>
+    <div id="battleLoading" class="loading">
 
+      <h2>Préparation de l'arène...</h2>
 
-<div class="hp">
+      <div class="loading-bar">
+        <div class="loading-fill"></div>
+      </div>
 
-🏰
+    </div>
 
-<span id="enemyHPText">
-100%
-</span>
+    <img
+      src="0be0ebec-5842-49b9-a58b-3af922a15119.png"
+      class="arena-map"
+      alt="Arène"
+    >
 
-</div>
+    <div class="castle enemy-castle">
 
+      <div class="castle-icon">🏰</div>
 
-</div>
+      <div class="castle-hp">
+        <div id="enemyCastleFill" class="castle-fill"></div>
+      </div>
 
+    </div>
 
-<div
-id="arena"
-class="arena">
+    <div class="castle player-castle">
 
+      <div class="castle-icon">🏰</div>
 
-<!-- LOADING -->
+      <div class="castle-hp">
+        <div id="playerCastleFill" class="castle-fill"></div>
+      </div>
 
-<div
-id="battleLoading"
-class="loading">
+    </div>
 
+    <div id="unitsLayer"></div>
+    <div id="effectsLayer"></div>
 
-<h2>
-Préparation de l'arène...
-</h2>
+    <div id="battleResult" class="result hidden">
 
+      <div class="result-box">
 
-<div class="loading-bar">
+        <div id="resultIcon" class="result-icon">
+          🏆
+        </div>
 
-<div class="loading-fill">
-</div>
+        <h1 id="resultTitle">
+          VICTOIRE !
+        </h1>
 
-</div>
+        <p id="resultText">
+          Le château ennemi est détruit.
+        </p>
 
+        <button id="endBattleButton" class="primary">
+          CONTINUER
+        </button>
 
-</div>
+      </div>
 
+    </div>
 
-<!-- MAP -->
+  </div>
 
-<img
-src="0be0ebec-5842-49b9-a58b-3af922a15119.png"
-class="arena-map"
-alt="">
+  <div class="battle-bottom">
 
+    <div class="energy-row">
 
-<!-- ENEMY CASTLE -->
+      <div class="energy-label">
+        ⚡ <span id="energyText">5</span>/10
+      </div>
 
-<div class="castle enemy-castle">
+      <div class="energy-bar">
+        <div id="energyFill" class="energy-fill"></div>
+      </div>
 
+    </div>
 
-<div class="castle-icon">
-🏰
-</div>
+    <div id="battleHand" class="hand"></div>
 
-
-<div class="castle-hp">
-
-<div
-id="enemyCastleFill"
-class="castle-fill">
-</div>
-
-</div>
-
-
-</div>
-
-
-<!-- PLAYER CASTLE -->
-
-<div class="castle player-castle">
-
-
-<div class="castle-icon">
-🏰
-</div>
-
-
-<div class="castle-hp">
-
-<div
-id="playerCastleFill"
-class="castle-fill">
-</div>
+  </div>
 
 </div>
 
+<script>
 
-</div>
+/* =========================================================
+   EUROPA CARDS
+========================================================= */
 
+"use strict";
 
-<div id="unitsLayer">
-</div>
+const CARDS = [
 
-
-<div id="effectsLayer">
-</div>
-
-
-<!-- RESULT -->
-
-<div
-id="battleResult"
-class="result hidden">
-
-
-<div class="result-box">
-
-
-<div
-id="resultIcon"
-class="result-icon">
-
-🏆
-
-</div>
-
-
-<h1 id="resultTitle">
-
-VICTOIRE !
-
-</h1>
-
-
-<p id="resultText">
-
-Le château ennemi est détruit.
-
-</p>
-
-
-<button
-type="button"
-id="endBattleButton"
-class="primary">
-
-CONTINUER
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-<!-- BATTLE BOTTOM -->
-
-<div class="battle-bottom">
-
-
-<div class="energy-row">
-
-
-<div class="energy-label">
-
-⚡
-
-<span id="energyText">
-5
-</span>
-
-/10
-
-</div>
-
-
-<div class="energy-bar">
-
-<div
-id="energyFill"
-class="energy-fill">
-</div
+  {
